@@ -23,5 +23,5 @@ pip install nltk
 ```
 To install the plugin, type in Wox:
 ```
-wpm install Direct Translate
+wpm install Auto Direct Translate
 ```
