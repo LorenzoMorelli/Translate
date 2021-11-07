@@ -1,8 +1,8 @@
 {
-    "ID":"1b7c732781f94b748ed08351f8200894",
+    "ID":"2b7c732781f94b748ed08351f8200894",
     "ActionKeyword":"tr",
     "Name":"Auto Direct Translate",
-    "Description":"Translate between english and any other language (RU by default)",
+    "Description":"Translate between english and any other language (IT by default)",
     "Author":"LorenzoMorelli",
     "Version":"1.0.0",
     "Language":"python",
