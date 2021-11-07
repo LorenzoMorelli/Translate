@@ -2,8 +2,15 @@
 import webbrowser
 from textblob import TextBlob, exceptions
 from wox import Wox, WoxAPI
+import nltk
+from nltk.corpus import words
 
-LANGUAGE = 'ru'
+LANGUAGE_OTHER = 'it'
+LANGUAGE_MAIN = 'en'
+
+def contains_english_word(phrase: str):
+    return phrase.split(" ")[0] in set(words.words())
+
 
 def translate(query):
     query_modified = query.strip().lower()
@@ -11,7 +18,8 @@ def translate(query):
     results = []
     if query_modified:
         try:
-            from_lang, to_lang = ('en', LANGUAGE) if query_modified[0] in en else (LANGUAGE, 'en')
+            # detect if first word is in english or italian           
+            from_lang, to_lang = (LANGUAGE_MAIN, LANGUAGE_OTHER) if contains_english_word(query_modified) else (LANGUAGE_OTHER, LANGUAGE_MAIN)
             translation = TextBlob(query_modified).translate(from_lang, to_lang)
             results.append({
                 "Title": str(translation),
@@ -39,4 +47,5 @@ class Translate(Wox):
         webbrowser.open(url)
 
 if __name__ == "__main__":
+    nltk.download('words')
     Translate()
