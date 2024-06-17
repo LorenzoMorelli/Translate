@@ -1,5 +1,5 @@
 # Translate
-Plugin for [Wox](http://www.getwox.com/) that translates between english and any other language.
+Plugin for [Wox]([http://www.getwox.com/](https://github.com/Wox-launcher/Wox)) that translates between english and any other language.
 
 ![Translate](https://i.ibb.co/fFjKB2F/Plugin-In-Use.png)
 
